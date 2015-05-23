@@ -3,38 +3,64 @@
 
   .slide {
     height: 100px;
-    min-width: 200px;
+    min-width: 100px;
+    max-width: 300px;
     background-color: #eee;
+
+    img {
+      max-width: 300px;
+      max-height: 100px
+    }
   }
 }
 
 .slick-slider.head {
   .slide {
     height: 100px;
+
+    img {
+      max-height: 100px;
+    }
   }
 }
 
 .slick-slider.shirt {
   .slide {
     height: 200px;
+
+    img {
+      max-height: 200px;
+    }
   }
 }
 
 .slick-slider.pants {
   .slide {
-    height: 200px;
+    height: 250px;
+
+    img {
+      max-height: 250px;
+    }
   }
 }
 
 .slick-slider.shoes {
   .slide {
-    height: 100px;
+    height: 50px;
+
+    img {
+      max-height: 50px;
+    }
   }
 }
 
 .slick-slider.project {
   .slide {
     height: 400px;
+  }
+
+  img {
+    max-height: 200px;
   }
 }
 
