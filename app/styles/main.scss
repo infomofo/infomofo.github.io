@@ -9,14 +9,32 @@
 }
 
 .slick-slider.head {
-    .slide {
-      height: 100px;
-    }
+  .slide {
+    height: 100px;
   }
+}
 
 .slick-slider.shirt {
   .slide {
     height: 200px;
+  }
+}
+
+.slick-slider.pants {
+  .slide {
+    height: 200px;
+  }
+}
+
+.slick-slider.shoes {
+  .slide {
+    height: 100px;
+  }
+}
+
+.slick-slider.project {
+  .slide {
+    height: 400px;
   }
 }
 

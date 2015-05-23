@@ -383,13 +383,24 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: 'app/bower_components/slick-carousel/slick',
+          src: [
+            'fonts/*.ttf',
+            'fonts/*.eot',
+            'fonts/*.woff'
+          ],
+          dest: '<%= yeoman.dist %>/styles/'
         }]
       },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
-        src: '{,*/}*.css'
+        src: [
+          '{,*/}*.css'
+        ]
       }
     },
 
