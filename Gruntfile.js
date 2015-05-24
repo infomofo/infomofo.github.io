@@ -180,7 +180,8 @@ module.exports = function (grunt) {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
         ignorePath:  /\.\.\//,
-        exclude: '.*/slick-carousel/slick/slick.*\\.css'
+        exclude: ['.*/slick-carousel/slick/slick.*\\.css',
+          '.*/font-awesome/css/font-awesome\\.css']
       },
       test: {
         devDependencies: true,
