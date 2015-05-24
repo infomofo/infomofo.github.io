@@ -1,6 +1,6 @@
 <md-content>
   <slick infinite=true
-         speed=200
+         speed=500
          slides-to-show=5
          slides-to-scroll=1
          variable-width="true"
@@ -8,42 +8,17 @@
          center-mode="true"
          center-padding="60px"
          layout-fill
-         current-index="selectedHead"
+         current-index="dataModel.selectedHead"
          class="head"
     >
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/head1.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/head2.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/head3.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/head4.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/head5.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/head6.jpg"/>
+    <div class="slide" layout="row" ng-repeat="head in heads">
+      <div layout="column" layout-align="center center" ng-click="selectHead($index)">
+        <img ng-src="{{head}}"/>
       </div>
     </div>
   </slick>
   <slick infinite=true
-         speed=200
+         speed=500
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -51,57 +26,12 @@
          center-mode="true"
          center-padding="60px"
          layout-fill
-         current-index="selectedShirt"
+         current-index="dataModel.selectedShirt"
          class="shirt"
     >
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt7.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt8.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt1.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt3.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt4.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt5.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt6.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt10.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt9.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shirt2.jpg"/>
+    <div class="slide" layout="row" ng-repeat="shirt in shirts">
+      <div layout="column" layout-align="center center" ng-click="selectShirt($index)">
+        <img ng-src="{{shirt}}"/>
       </div>
     </div>
   </slick>
@@ -255,7 +185,7 @@
     <h2>i'm on</h2>
   </div>
   <slick infinite=true
-         speed=200
+         speed=700
          slides-to-show=5
          slides-to-scroll=1
          variable-width="true"
@@ -323,6 +253,6 @@
   </slick>
 </md-content>
 <md-button class="md-fab" aria-label="FAB" ng-click="shuffle()" ng-disabled="dataModel.shuffleIcon !== 'shuffle'">
-  <ng-md-icon icon="{{dataModel.shuffleIcon}}"></ng-md-icon>
+  <ng-md-icon icon="{{dataModel.shuffleIcon}}" options='{"duration": 375}'></ng-md-icon>
   <md-tooltip>shuffle</md-tooltip>
 </md-button>
