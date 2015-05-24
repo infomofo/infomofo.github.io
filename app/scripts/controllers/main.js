@@ -8,7 +8,13 @@
  * Controller of the infomofogithubioApp
  */
 angular.module('infomofogithubioApp')
-  .controller('MainCtrl', function ($scope, $timeout) {
+  .controller('MainCtrl', function ($scope, $timeout, Interceptor) {
+
+    //trigger the loading screen to start
+    Interceptor.start();
+
+    // Give the images time, 4 seconds, to render
+    $timeout(Interceptor.end, 4000)
 
     $scope.heads = [
       '/images/head1.jpg',

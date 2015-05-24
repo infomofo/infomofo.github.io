@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'ngMaterial',
     'slick',
-    'ngMdIcons'
+    'ngMdIcons',
+    'ngLoading'
   ])
   .config(function ($routeProvider) {
     $routeProvider
