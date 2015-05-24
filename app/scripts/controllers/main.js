@@ -8,10 +8,16 @@
  * Controller of the infomofogithubioApp
  */
 angular.module('infomofogithubioApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $timeout) {
+
+    $scope.dataModel = {
+      shuffleIcon: 'shuffle'
+    };
+
+    $scope.shuffle = function() {
+      $scope.dataModel.shuffleIcon = 'autorenew';
+      $timeout(function() {
+        $scope.dataModel.shuffleIcon = 'shuffle';
+      }, 750);
+    };
   });
