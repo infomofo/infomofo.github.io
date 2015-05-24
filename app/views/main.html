@@ -36,7 +36,7 @@
     </div>
   </slick>
   <slick infinite=true
-         speed=200
+         speed=500
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -44,52 +44,17 @@
          center-mode="true"
          center-padding="60px"
          layout-fill
-         current-index="selectedPants"
+         current-index="dataModel.selectedPants"
          class="pants"
     >
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants1.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="http://www.surfstationstore.com/shop/images/product/r/rvca-eastern-mens-boardshorts-280px-392px.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants3.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants2.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants4.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants6.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants7.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/pants5.jpg"/>
+    <div class="slide" layout="row" ng-repeat="pant in pants">
+      <div layout="column" layout-align="center center" ng-click="selectPants($index)">
+        <img ng-src="{{pant}}"/>
       </div>
     </div>
   </slick>
   <slick infinite=true
-         speed=200
+         speed=500
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -97,47 +62,12 @@
          center-mode="true"
          center-padding="60px"
          layout-fill
-         current-index="selectedShoes"
+         current-index="dataModel.selectedShoes"
          class="shoes"
     >
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes2.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes1.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes3.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes4.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes5.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes6.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes7.jpg"/>
-      </div>
-    </div>
-    <div class="slide" layout="row">
-      <div layout="column" layout-align="center center" >
-        <img src="images/shoes8.jpg"/>
+    <div class="slide" layout="row" ng-repeat="shoe in shoes">
+      <div layout="column" layout-align="center center" ng-click="selectShoes($index)">
+        <img ng-src="{{shoe}}"/>
       </div>
     </div>
   </slick>
