@@ -11,7 +11,7 @@ angular.module('infomofogithubioApp')
   .controller('MainCtrl', function ($scope, $timeout) {
 
     $scope.heads = [
-      'images/head1.jpg',
+      '/images/head1.jpg',
       'images/head2.jpg',
       'images/head3.jpg',
       'images/head4.jpg',
