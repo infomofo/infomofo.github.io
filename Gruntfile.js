@@ -156,7 +156,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          map: true,
+          map: true
         },
         files: [{
           expand: true,
@@ -179,8 +179,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//,
-        exclude: ['/slick/slick.css']
+        ignorePath:  /\.\.\//
       },
       test: {
         devDependencies: true,
