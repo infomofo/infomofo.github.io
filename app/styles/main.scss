@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .slick-slider {
   margin-bottom: 1px;
 
@@ -6,10 +10,15 @@
     min-width: 100px;
     max-width: 300px;
     background-color: #eee;
+    opacity: 0.4;
 
     img {
       max-height: 100px
     }
+  }
+
+  .slide.slick-center {
+    opacity: 1.0;
   }
 }
 
