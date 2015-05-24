@@ -179,7 +179,8 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
+        ignorePath:  /\.\.\//,
+        exclude: '.*/slick-carousel/slick/slick.*\\.css'
       },
       test: {
         devDependencies: true,
