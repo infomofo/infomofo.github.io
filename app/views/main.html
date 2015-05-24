@@ -1,6 +1,6 @@
 <md-content ng-cloak>
   <slick infinite=true
-         speed=500
+         speed=400
          slides-to-show=5
          slides-to-scroll=1
          variable-width="true"
@@ -18,7 +18,7 @@
     </div>
   </slick>
   <slick infinite=true
-         speed=500
+         speed=400
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -36,7 +36,7 @@
     </div>
   </slick>
   <slick infinite=true
-         speed=500
+         speed=400
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -54,7 +54,7 @@
     </div>
   </slick>
   <slick infinite=true
-         speed=500
+         speed=400
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -75,7 +75,7 @@
     <h2>projects i've worked on</h2>
   </div>
   <slick infinite=true
-         speed=200
+         speed=400
          slides-to-show=3
          slides-to-scroll=1
          variable-width="true"
@@ -115,7 +115,7 @@
     <h2>i'm on</h2>
   </div>
   <slick infinite=true
-         speed=700
+         speed=400
          slides-to-show=5
          slides-to-scroll=1
          variable-width="true"
@@ -185,7 +185,8 @@
     <h2>will chiong</h2>
   </div>
 </md-content>
-<md-button class="md-fab" aria-label="FAB" ng-click="shuffle()" ng-disabled="dataModel.shuffleIcon !== 'shuffle'">
-  <ng-md-icon icon="{{dataModel.shuffleIcon}}" options='{"duration": 375}'></ng-md-icon>
+<md-button class="md-fab" aria-label="FAB" ng-click="shuffle()" ng-disabled="dataModel.shuffling" layout="row" layout-align="center center">
+  <i class="fa fa-random fa-2x" ng-class="{'fa-spin': dataModel.shuffling}"></i>
+  <!--<ng-md-icon icon="{{dataModel.shuffleIcon}}" options='{"duration": 375}'></ng-md-icon>-->
   <md-tooltip>shuffle</md-tooltip>
 </md-button>

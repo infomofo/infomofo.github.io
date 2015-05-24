@@ -14,7 +14,7 @@ angular.module('infomofogithubioApp')
     Interceptor.start();
 
     // Give the images time, 4 seconds, to render
-    $timeout(Interceptor.end, 4000)
+    $timeout(Interceptor.end, 4000);
 
     $scope.heads = [
       '/images/head1.jpg',
@@ -60,7 +60,7 @@ angular.module('infomofogithubioApp')
     ];
 
     $scope.dataModel = {
-      shuffleIcon: 'shuffle',
+      shuffling: false,
       selectedShirt: 0,
       selectedHead: 0,
       selectedPants: 0,
@@ -90,14 +90,14 @@ angular.module('infomofogithubioApp')
     };
 
     $scope.shuffle = function() {
-      $scope.dataModel.shuffleIcon = 'autorenew';
+      $scope.dataModel.shuffling = true;
       $scope.dataModel.selectedShirt = randomIndex($scope.shirts.length);
       $scope.dataModel.selectedHead = randomIndex($scope.heads.length);
       $scope.dataModel.selectedPants = randomIndex($scope.pants.length);
       $scope.dataModel.selectedShoes = randomIndex($scope.shoes.length);
       $timeout(function() {
-        $scope.dataModel.shuffleIcon = 'shuffle';
-      }, 250);
+        $scope.dataModel.shuffling = false;
+      }, 400);
     };
 
     $timeout(function() {

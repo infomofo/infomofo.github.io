@@ -2,6 +2,13 @@ a {
   text-decoration: none;
 }
 
+.fa-spin {
+  -webkit-animation: fa-spin .5s infinite linear;
+  -moz-animation: fa-spin .5s infinite linear;
+  -o-animation: fa-spin .5s infinite linear;
+  animation: fa-spin .5s infinite linear;
+}
+
 .slick-slider {
   margin-bottom: 1px;
 
