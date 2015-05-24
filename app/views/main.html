@@ -1,7 +1,7 @@
 <md-content>
   <slick infinite=true
          speed=200
-         slides-to-show=3
+         slides-to-show=5
          slides-to-scroll=1
          variable-width="true"
          layout="row"
@@ -324,4 +324,5 @@
 </md-content>
 <md-button class="md-fab" aria-label="FAB" ng-click="shuffle()" ng-disabled="dataModel.shuffleIcon !== 'shuffle'">
   <ng-md-icon icon="{{dataModel.shuffleIcon}}"></ng-md-icon>
+  <md-tooltip>shuffle</md-tooltip>
 </md-button>
