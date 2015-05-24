@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMaterial',
-    'slick'
+    'slick',
+    'ngMdIcons'
   ])
   .config(function ($routeProvider) {
     $routeProvider
