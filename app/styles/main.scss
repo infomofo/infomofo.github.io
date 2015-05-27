@@ -15,8 +15,8 @@ a {
   .slide {
     height: 100px;
     min-width: 100px;
-    background-color: #eee;
-    opacity: 0.4;
+    background-color: rgb(224,224,224);
+    opacity: 0.3;
 
     img {
       max-height: 100px;
@@ -94,15 +94,19 @@ a {
 .slick-slider.networks {
   .slide {
     background: transparent;
-    height: 48px;
+    height: 66px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   md-chips.md-default-theme .md-chip {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height:50px;
 
     a {
       font-size: larger;
+      margin-top: 9px;
     }
   }
 }

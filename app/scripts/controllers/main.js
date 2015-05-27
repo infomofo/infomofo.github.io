@@ -10,12 +10,6 @@
 angular.module('infomofogithubioApp')
   .controller('MainCtrl', function ($scope, $timeout, Interceptor) {
 
-    //trigger the loading screen to start
-    Interceptor.start();
-
-    // Give the images time, 4 seconds, to render
-    $timeout(Interceptor.end, 4000);
-
     $scope.heads = [
       '/images/head1.jpg',
       'images/head2.jpg',
@@ -61,12 +55,12 @@ angular.module('infomofogithubioApp')
 
     $scope.dataModel = {
       shuffling: false,
-      selectedShirt: 0,
-      selectedHead: 0,
-      selectedPants: 0,
-      selectedShoes: 0,
-      selectedProject: 0,
-      selectedNetwork: 0
+      selectedShirt: -1,
+      selectedHead: -1,
+      selectedPants: -1,
+      selectedShoes: -1,
+      selectedProject: -1,
+      selectedNetwork: -1
     };
 
     var randomIndex = function(length) {
@@ -106,5 +100,5 @@ angular.module('infomofogithubioApp')
 
     $timeout(function() {
       $scope.shuffle();
-    }, 100);
+    }, 200);
   });
