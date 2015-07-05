@@ -91,7 +91,7 @@ angular.module('infomofogithubioApp')
       $scope.dataModel.selectedHead = randomIndex($scope.heads.length);
       $scope.dataModel.selectedPants = randomIndex($scope.pants.length);
       $scope.dataModel.selectedShoes = randomIndex($scope.shoes.length);
-      $scope.dataModel.selectedProject = randomIndex(4);
+      $scope.dataModel.selectedProject = randomIndex(5);
       $scope.dataModel.selectedNetwork = randomIndex(9);
       $timeout(function() {
         $scope.dataModel.shuffling = false;
