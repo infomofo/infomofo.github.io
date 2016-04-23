@@ -16,7 +16,8 @@ angular.module('infomofogithubioApp')
       'images/head3.jpg',
       'images/head4.jpg',
       'images/head5.jpg',
-      'images/head6.jpg'
+      'images/head6.jpg',
+      'images/head7.png',
     ];
 
     $scope.shirts = [
@@ -29,7 +30,8 @@ angular.module('infomofogithubioApp')
       'images/shirt7.jpg',
       'images/shirt8.jpg',
       'images/shirt9.jpg',
-      'images/shirt10.jpg'
+      'images/shirt10.jpg',
+      'images/shirt11.png',
     ];
 
     $scope.pants = [
@@ -39,7 +41,8 @@ angular.module('infomofogithubioApp')
       'images/pants4.jpg',
       'images/pants5.jpg',
       'images/pants6.jpg',
-      'images/pants7.jpg'
+      'images/pants7.jpg',
+      'images/pants8.png',
     ];
 
     $scope.shoes = [
@@ -50,7 +53,8 @@ angular.module('infomofogithubioApp')
       'images/shoes5.jpg',
       'images/shoes6.jpg',
       'images/shoes7.jpg',
-      'images/shoes8.jpg'
+      'images/shoes8.jpg',
+      'images/shoes9.png',
     ];
 
     $scope.dataModel = {
@@ -91,7 +95,7 @@ angular.module('infomofogithubioApp')
       $scope.dataModel.selectedHead = randomIndex($scope.heads.length);
       $scope.dataModel.selectedPants = randomIndex($scope.pants.length);
       $scope.dataModel.selectedShoes = randomIndex($scope.shoes.length);
-      $scope.dataModel.selectedProject = randomIndex(5);
+      $scope.dataModel.selectedProject = randomIndex(7);
       $scope.dataModel.selectedNetwork = randomIndex(9);
       $timeout(function() {
         $scope.dataModel.shuffling = false;
