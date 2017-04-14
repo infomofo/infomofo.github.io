@@ -8,7 +8,7 @@
  * Controller of the infomofogithubioApp
  */
 angular.module('infomofogithubioApp')
-  .controller('MainCtrl', function ($scope, $timeout, Interceptor) {
+  .controller('MainCtrl', function ($scope, $timeout) {
 
     $scope.heads = [
       '/images/head1.jpg',
