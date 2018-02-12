@@ -5,6 +5,8 @@ version 0.11.1.
 
 ## Build & development
 
+Install dependencies with `yarn`.
+Install bower deps with `bower install`.
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
