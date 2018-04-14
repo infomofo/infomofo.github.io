@@ -1,0 +1,168 @@
+---
+layout: page
+title: Infomofo
+heads:
+  - heads/illustration.png
+  - heads/head1.jpg
+  - heads/head2.jpg
+  - heads/head3.jpg
+  - heads/head4.jpg
+  - heads/head5.jpg
+  - heads/head6.jpg
+  - heads/crosby.png
+  - heads/eclipse.png
+  - heads/beach.JPG
+tops:
+  - tops/illustration.png
+  - tops/shirt1.jpg
+  - tops/shirt2.jpg
+  - tops/shirt3.jpg
+  - tops/shirt4.jpg
+  - tops/shirt5.jpg
+  - tops/shirt6.jpg
+  - tops/shirt7.jpg
+  - tops/shirt8.jpg
+  - tops/shirt9.jpg
+  - tops/shirt10.jpg
+bottoms:
+  - bottoms/illustration.png
+  - bottoms/pants5.jpg
+  - bottoms/pants6.jpg
+  - bottoms/pants7.jpg
+  - bottoms/pants3.jpg
+  - bottoms/pants4.jpg
+  - bottoms/pants1.jpg
+  - bottoms/pants2.jpg
+shoes:
+  - shoes/illustration.png
+  - shoes/artefacts-pink.jpg
+  - shoes/shoes1.jpg
+  - shoes/shoes2.jpg
+  - shoes/shoes3.jpg
+  - shoes/shoes4.jpg
+  - shoes/shoes5.jpg
+  - shoes/shoes6.jpg
+  - shoes/shoes8.jpg
+  - shoes/rainbow-sandals-leather.jpg
+projects:
+  - name: Kit
+    image: projects/kit.png
+    link: https://kit.com
+    description: A place to talk about the products worth getting.
+  - name: Gilt
+    link: https://gilt.com
+    image: projects/gilt.png
+    description: Personalization for optimizing flash sale conversion.
+  - name: BeerXchange
+    link: https://beerxchange.com
+    image: projects/beerxchangeandroid.png
+    description: A Network for collecting and trading craft beer.
+  - name: 2 Beer Queers
+    link: https://2beerqueers.com
+    image: projects/2bq.png
+    description: My husband and I blog about the beer we're brewing and tasting.
+  - name: Marvel Puzzle Quest Party Planner
+    link: https://infomofo.com/mpq-party-planner
+    image: projects/mpqpartyplanner.png
+    description: An extremely addictive game planner.
+  - name: Food I Made
+    link: https://foodimade.com
+    image: projects/foodimade.png
+    description: An AMP optimized Jekyll website for showcasing my favorite recipes.
+networks:
+  - name: github
+    link: https://github.com/infomofo
+    icon: github
+  - name: linkedin
+    link: https://www.linkedin.com/in/willchiong
+    icon: linkedin-square
+  - name: insta
+    link: https://www.instagram.com/infomofo
+    icon: instagram
+  - name: twitter
+    link: https://www.twitter.com/infomofo
+    icon: twitter
+  - name: blog
+    link: https://blog.infomofo.com
+    icon: rss
+  - name: untappd
+    link: https://untappd.com/user/infomofo
+    icon: beer
+  - name: flickr
+    link: https://secure.flickr.com/photos/infomofo
+    icon: flickr
+  - name: pinterest
+    link: https://pinterest.com/infomofo
+    icon: pinterest
+  - name: kit
+    link: https:/kit.com/infomofo
+    icon: list
+---
+<div class="main">
+  <div id="heads" class="carousel">
+    {% for head in page.heads %}
+    <div class="head carousel--slide">
+      <img src="{{ head }}" class="siemaSlider--slide"/>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div id="tops" class="carousel">
+    {% for top in page.tops %}
+    <div class="top carousel--slide">
+      <img src="{{ top }}" class="siemaSlider--slide" />
+    </div>
+    {% endfor %}
+  </div>
+  <div id="bottoms" class="carousel">
+    {% for article in page.bottoms %}
+    <div class="bottom carousel--slide">
+      <img src="{{ article }}" class="siemaSlider--slide" />
+    </div>
+    {% endfor %}
+  </div>
+  <div id="shoes" class="carousel">
+    {% for article in page.shoes %}
+    <div class="shoe carousel--slide">
+      <img src="{{ article }}" class="siemaSlider--slide" />
+    </div>
+    {% endfor %}
+  </div>
+  <div class="sectionHeader">
+    <h2>projects i've worked on</h2>
+  </div>
+  <div id="projects" class="carousel">
+    {% for article in page.projects %}
+    <div class="project carousel--slide">
+      <a target="_blank" href="{{ article.link }}" class="siemaSlider--slide">
+        <img src="{{ article.image }}"/>
+        <h4>{{ article.name }}</h4>
+        <p>{{ article.description }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="sectionHeader">
+    <h2>check out my</h2>
+  </div>
+  <div id="networks" class="carousel">
+    {% for article in page.networks %}
+    <div class="network carousel--slide">
+      <a target="_blank" href="{{ article.link }}" class="siemaSlider--slide">
+        <i class="fa fa-2x fa-{{ article.icon }}"></i>
+        {{ article.name }}
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<button onClick="shuffle()" id="randomButton" disabled>
+  <i class="fa fa-random fa-2x"></i>
+</button>
+
+{% capture scripts %}
+{% include main.js %}
+{% endcapture %}
+<script>
+  {{ scripts | uglify | strip }}
+</script>
