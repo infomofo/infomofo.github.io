@@ -41,7 +41,9 @@ bottoms:
   - bottoms/raw-denim.png
 shoes:
   - shoes/illustration.png
-  - shoes/artefacts-pink.jpg
+  - image: shoes/artefact-pink.jpg
+    link: https://www.artefact.nyc/
+    name: Artefact NYC
   - shoes/shoes1.jpg
   - shoes/shoes2.jpg
   - shoes/shoes3.jpg
@@ -131,16 +133,30 @@ networks:
   </div>
   <div id="bottoms" class="carousel">
     {% for article in page.bottoms %}
+    {% if article.link %}
+    <a class="bottom carousel--slide" target="_blank" href="{{ article.link}}"
+      title="{{ article.name }}">
+      <img src="{{ article }}" class="siemaSlider--slide" />
+    </a>
+    {% else %}
     <div class="bottom carousel--slide">
       <img src="{{ article }}" class="siemaSlider--slide" />
     </div>
+    {% endif %}
     {% endfor %}
   </div>
   <div id="shoes" class="carousel">
     {% for article in page.shoes %}
+    {% if article.link %}
+    <a class="shoe carousel--slide" target="_blank" href="{{ article.link}}"
+      title="{{ article.name }}">
+      <img src="{{ article.image }}" class="siemaSlider--slide" />
+    </a>
+    {% else %}
     <div class="shoe carousel--slide">
       <img src="{{ article }}" class="siemaSlider--slide" />
     </div>
+    {% endif %}
     {% endfor %}
   </div>
   <div class="sectionHeader">
