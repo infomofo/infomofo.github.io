@@ -19,8 +19,10 @@ Images can be optimized for web delivery just scaled on height maintaining aspec
 
 i.e.
 
-`mogrify -geometry x128 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _heads/*`
-`mogrify -geometry x160 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _tops/*`
-`mogrify -geometry x200 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _bottoms/*`
-`mogrify -geometry x80 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _shoes/*`
-`mogrify -geometry x300 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _projects/*`
+```sh
+mogrify -geometry x128 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _heads/*
+mogrify -geometry x160 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _tops/*
+mogrify -geometry x200 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _bottoms/*
+mogrify -geometry x80 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _shoes/*
+mogrify -geometry x300 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG _projects/*
+```
