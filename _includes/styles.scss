@@ -2,6 +2,7 @@
   padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
 }
+
 .carousel {
   height: 160px;
   &#heads {
@@ -103,6 +104,8 @@
 }
 
 #randomButton {
+  outline: none;
+  border: none;
   background-color: rgb(255,64,129);
   border-radius: 50%;
   bottom: 10px;
@@ -129,6 +132,7 @@
   flex-direction: row;
   text-decoration: none;
   outline: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   @media screen and (min-width: 768px) {
     bottom: initial;
@@ -137,7 +141,6 @@
   }
 
   &:disabled, &[disabled] {
-    background: #ddd;
     opacity: 0.3;
   }
 }
@@ -148,4 +151,8 @@
   justify-content: center;
   align-items: center;
   font-family: 'Open Sans', sans-serif;
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 }
