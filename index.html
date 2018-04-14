@@ -69,6 +69,51 @@ projects:
     link: https://foodimade.com
     image: projects/foodimade.png
     description: An AMP optimized Jekyll website for showcasing my favorite recipes.
+  - name: Vinyasa.me
+    link: https://vinyasa.me
+    image: projects/vinyasame.png
+    description: A VueJS site powered by Google Firebase for planning a home yoga practice, complete with voice instructions.
+networks:
+  - name: github
+    link: https://github.com/infomofo
+    icon: github
+  - name: linkedin
+    link: https://www.linkedin.com/in/willchiong
+    icon: linkedin-square
+  - name: insta
+    link: https://www.instagram.com/infomofo
+    icon: instagram
+  - name: twitter
+    link: https://www.twitter.com/infomofo
+    icon: twitter
+  - name: blog
+    link: https://blog.infomofo.com
+    icon: rss
+  - name: untappd
+    link: https://untappd.com/user/infomofo
+    icon: beer
+  - name: flickr
+    link: https://secure.flickr.com/photos/infomofo
+    icon: flickr
+  - name: pinterest
+    link: https://pinterest.com/infomofo
+    icon: pinterest
+  - name: kit
+    link: https:/kit.com/infomofo
+    icon: list
+---
+<div class="main">
+  <div id="heads" class="carousel">
+    {% for head in page.heads %}
+    <div class="head carousel--slide">
+      <img src="{{ head }}" class="siemaSlider--slide"/>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div id="tops" class="carousel">
+    {% for top in page.tops %}
+    <div class="top carousel--slide">
 networks:
   - name: github
     link: https://github.com/infomofo
