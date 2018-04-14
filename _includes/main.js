@@ -1,6 +1,7 @@
 /** Initialize Carousels */
 var heads = new Flickity('#heads', {
   autoPlay: false,
+  dragThreshold: 10,
   imagesLoaded: true,
   pageDots: false,
   prevNextButtons: false,
@@ -9,6 +10,7 @@ var heads = new Flickity('#heads', {
 });
 var tops = new Flickity('#tops', {
   autoPlay: false,
+  dragThreshold: 10,
   imagesLoaded: true,
   pageDots: false,
   prevNextButtons: false,
@@ -17,6 +19,7 @@ var tops = new Flickity('#tops', {
 });
 var bottoms = new Flickity('#bottoms', {
   autoPlay: false,
+  dragThreshold: 10,
   imagesLoaded: true,
   pageDots: false,
   prevNextButtons: false,
@@ -25,6 +28,7 @@ var bottoms = new Flickity('#bottoms', {
 });
 var shoes = new Flickity('#shoes', {
   autoPlay: false,
+  dragThreshold: 10,
   imagesLoaded: true,
   pageDots: false,
   prevNextButtons: false,
@@ -33,6 +37,7 @@ var shoes = new Flickity('#shoes', {
 });
 var projects = new Flickity('#projects', {
   autoPlay: false,
+  dragThreshold: 10,
   imagesLoaded: true,
   pageDots: false,
   prevNextButtons: false,
@@ -41,6 +46,7 @@ var projects = new Flickity('#projects', {
 });
 var networks = new Flickity('#networks', {
   autoPlay: false,
+  dragThreshold: 10,
   imagesLoaded: true,
   pageDots: false,
   prevNextButtons: false,
