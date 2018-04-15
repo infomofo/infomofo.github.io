@@ -77,7 +77,7 @@ function shuffle() {
   window.setTimeout(function() {
     randomButton.classList.remove('fa-spin');
     randomButton.removeAttribute('disabled');
-  }, 800);
+  }, 1000);
 };
 
 window.setTimeout(function() {
