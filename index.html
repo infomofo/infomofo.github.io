@@ -99,6 +99,9 @@ networks:
   - name: blog
     link: https://blog.infomofo.com
     icon: rss
+  - name: micro.blog
+    link: https://micro.blog/infomofo
+    icon: star
   - name: untappd
     link: https://untappd.com/user/infomofo
     icon: beer
@@ -179,7 +182,7 @@ networks:
   <div id="networks" class="carousel">
     {% for article in page.networks %}
     <div class="network carousel--slide">
-      <a target="_blank" href="{{ article.link }}" class="siemaSlider--slide">
+      <a target="_blank" href="{{ article.link }}" rel="me" class="siemaSlider--slide">
         <i class="fa fa-2x fa-{{ article.icon }}"></i>
         {{ article.name }}
       </a>
