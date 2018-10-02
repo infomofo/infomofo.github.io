@@ -90,34 +90,37 @@ projects:
 networks:
   - name: github
     link: https://github.com/infomofo
-    icon: github
+    icon: fab fa-github
   - name: linkedin
     link: https://www.linkedin.com/in/willchiong
-    icon: linkedin-square
+    icon: fab fa-linkedin
   - name: insta
     link: https://www.instagram.com/infomofo
-    icon: instagram
+    icon: fab fa-instagram
   - name: twitter
     link: https://www.twitter.com/infomofo
-    icon: twitter
+    icon: fab fa-twitter
   - name: blog
     link: https://blog.infomofo.com
-    icon: rss
+    icon: fa fa-rss
   - name: micro.blog
     link: https://micro.blog/infomofo
-    icon: star
+    icon: fa fa-star
   - name: untappd
     link: https://untappd.com/user/infomofo
-    icon: beer
+    icon: fab fa-untappd
   - name: flickr
     link: https://secure.flickr.com/photos/infomofo
-    icon: flickr
+    icon: fab fa-flickr
   - name: pinterest
     link: https://pinterest.com/infomofo
-    icon: pinterest
+    icon: fab fa-pinterest
   - name: kit
     link: https:/kit.com/infomofo
-    icon: list
+    icon: fa fa-grip-horizontal
+  - name: patreon
+    link: https:/patreon.com/beerxchange
+    icon: fab fa-patreon
 ---
 <div class="main">
   <div class="sectionHeader">
@@ -187,7 +190,7 @@ networks:
     {% for article in page.networks %}
     <div class="network carousel--slide">
       <a target="_blank" href="{{ article.link }}" rel="me" class="siemaSlider--slide">
-        <i class="fa fa-2x fa-{{ article.icon }}"></i>
+        <i class="fa-2x {{ article.icon }}"></i>
         {{ article.name }}
       </a>
     </div>
